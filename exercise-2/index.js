@@ -4,7 +4,9 @@ const STRIPE_TEST_SECRET_KEY = 'rk_test_51EDa6GIrkMUcWfFwXon9vsJYpTqX2eTqbINAUf4
 const stripe = Stripe(STRIPE_TEST_SECRET_KEY);
 
 const handler = async () => {
+
   let finalCustomers = []
+
   // add here the code
   // filter the customers in Spain
   // for each customer with country === Spain, create a Stripe customer
@@ -22,4 +24,5 @@ const handler = async () => {
       }
     }] 
   */
+ 
 } 
