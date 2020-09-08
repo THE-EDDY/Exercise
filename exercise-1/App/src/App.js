@@ -1,5 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
+import ExampleComponent from './components/ExampleComponent'
+import { ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'https://graphqlzero.almansi.me/api',
+  cache: new InMemoryCache()
+});
+
 
 function App() {
   return (
@@ -12,6 +21,9 @@ function App() {
           </div>
         </div>
       </div>
+      <ApolloProvider client={client}>
+        <ExampleComponent />
+      </ApolloProvider>  
   </div>
   );
 }
